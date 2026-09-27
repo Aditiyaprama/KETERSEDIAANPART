@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Info Sparepart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Warehouse Info Sparepart</h1>
+            <p>Cek status ketersediaan part berdasarkan Nomor PKB</p>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="searchPkb" placeholder="Masukkan nomor PKB, contoh: PKB-001" aria-label="Nomor PKB">
+            <button type="button" id="searchBtn">Cek Status</button>
+        </div>
+
+        <section id="resultContainer" class="result-container hidden" aria-live="polite">
+            <h2>Hasil Pencarian PKB</h2>
+            <div class="info-card">
+                <p><strong>Nomor PKB:</strong> <span id="displayPkb"></span></p>
+                <p><strong>Nama Mekanik:</strong> <span id="displayMekanik"></span></p>
+                <p><strong>Unit / Kendaraan:</strong> <span id="displayUnit"></span></p>
+            </div>
+
+            <h3>Daftar Sparepart</h3>
+            <table class="part-table">
+                <thead>
+                    <tr>
+                        <th>Kode Part</th>
+                        <th>Nama Sparepart</th>
+                        <th>Jumlah</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </section>
+
+        <p id="errorContainer" class="error-msg hidden" role="alert"></p>
+    </main>
+</body>
+</html>
